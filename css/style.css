@@ -1377,16 +1377,18 @@ body.resume-opened .deebo_fn__cv .cv__bg2{
 .clients_wrapper a{
 	display: block;
 }
-.clients_wrapper img{
-	max-width: 88%;
-    max-height: 100px;
-	opacity: .5;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
+.clients_wrapper img {
+	height: 100%;
+	width: auto;
+	max-height: none;
+	object-fit: cover;
+	opacity: 0.7;
+
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 .clients_wrapper a:hover img{
 	opacity: 1;
@@ -1539,6 +1541,30 @@ body.resume-opened .deebo_fn__cv .cv__bg2{
 .tips_content .read_more:hover{
 	border-color: var(--mc);
 	color: var(--mc);
+}
+.full-article {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	color: #fff;
+	background-color: var(--mc);
+	min-height: 40px;         /* ensure at least this height */
+    height: auto; 
+	padding: 0 25px;       /* wider horizontal padding */
+	border-radius: 8px;
+	font-size: 18px;
+	font-weight: 400;
+	transition: filter 0.3s ease, background-color 0.3s ease;
+	margin-top: 15px;
+	width: fit-content;           /* no forced full width */
+	cursor: pointer;
+	border: none;
+	text-decoration: none;
+	/* align-self: center; */
+}
+.full-article:hover {
+	filter: brightness(0.85);
 }
 .load_more{
 	clear: both;
